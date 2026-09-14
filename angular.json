@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "865c52c0-61dc-4911-9ceb-b35f8c071010"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -19,12 +20,15 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
             "styles": [
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css", 
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ]
           },
@@ -54,6 +58,9 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+          "allowedHosts": ["evaporate-utopia-surround.ngrok-free.dev"]
+          },
           "configurations": {
             "production": {
               "buildTarget": "AnguluarSW24:build:production"
@@ -63,6 +70,7 @@
             }
           },
           "defaultConfiguration": "development"
+
         },
         "test": {
           "builder": "@angular/build:unit-test"

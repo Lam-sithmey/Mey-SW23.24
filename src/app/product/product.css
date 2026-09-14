@@ -1,0 +1,267 @@
+h1{
+    color: blue;
+    font-size: 30px;
+    font-family: sans-serif;
+    text-align: center;
+}
+.container {
+  width: 90%;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Table style */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Header */
+thead {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+/* Rows */
+tbody tr {
+  background-color: #f9f9f9;
+  transition: 0.3s;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+/* Hover effect */
+tbody tr:hover {
+  background-color: #dfe6ff;
+  transform: scale(1.01);
+}
+
+/* Border */
+th {
+  font-weight: bold;
+}
+
+.filter-box {
+display: flex;
+justify-content: space-between;
+margin-bottom: 15px;
+gap: 10px;
+}
+
+.filter-box input,
+.filter-box select {
+padding: 8px;
+border-radius: 5px;
+border: 1px solid #ccc;
+width: 48%;
+}
+
+/* Optional hover */
+.filter-box input:focus,
+.filter-box select:focus {
+outline: none;
+border-color: #667eea;
+}
+.filter-box {
+display: flex;
+justify-content: space-between;
+margin-bottom: 15px;
+gap: 10px;
+}
+
+.filter-box input,
+.filter-box select {
+padding: 8px;
+border-radius: 5px;
+border: 1px solid #ccc;
+width: 48%;
+}
+
+/* Optional hover */
+.filter-box input:focus,
+.filter-box select:focus {
+outline: none;
+border-color: #667eea;
+}
+/* Add style edit & delete button */
+.edit-btn{
+  padding: 7px 23px;
+  font-size: 18px;
+  border: none;
+  background-color: blue;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.delete-btn{
+  padding: 7px 10px;
+  font-size: 18px;
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.edit-btn:hover{
+  background-color: #667eea;
+}
+.delete-btn:hover{
+  background-color: darkorange;
+}
+
+
+/* ADD MODUAL */
+/* MODAL BACKGROUND */
+ .modal{
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.6);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 999;
+     animation: fadeIn 0.3s ease;
+}
+/* MODAL BOX */
+ .modal-content{
+     width: 400px;
+     background: #fff;
+     padding: 30px;
+     border-radius: 18px;
+     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+     animation: popup 0.3s ease;
+}
+/* TITLE */
+ .modal-content h2{
+     text-align: center;
+     margin-bottom: 20px;
+     color: #222;
+     font-size: 28px;
+}
+/* TEXT */
+ .modal-content p{
+     text-align: center;
+     margin-bottom: 25px;
+     color: #666;
+     line-height: 1.6;
+}
+/* INPUT */
+ .modal-content input{
+     width: 100%;
+     padding: 12px;
+     margin-bottom: 15px;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+     outline: none;
+     font-size: 15px;
+     box-sizing: border-box;
+     transition: 0.3s;
+}
+/* INPUT FOCUS */
+ .modal-content input:focus{
+     border-color: #4f46e5;
+     box-shadow: 0 0 8px rgba(79,70,229,0.3);
+}
+/* BUTTON COMMON */
+ .modal-content button{
+     padding: 12px 18px;
+     border: none;
+     border-radius: 10px;
+     cursor: pointer;
+     font-size: 15px;
+     transition: 0.3s;
+     margin-right: 10px;
+}
+ /* TEXT AREA */
+ textarea {
+  width: 100%;
+  height: 75px;
+  border-radius: 5px;
+  border: 2px solid gray;
+   margin-bottom: 15px;
+}
+textarea:focus {
+  outline: none;
+  border-color: blue;
+  box-shadow: 0 0 8px rgba(79,70,229,0.3);
+}
+
+/* CATEGORY */
+
+select{
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: 0.3s;
+ 
+}
+select:focus{
+  outline: none;
+  border-color: blue;
+  box-shadow: 0 0 8px rgba(79,70,229,0.3);
+}
+
+ /* TEXTAREA FOCUS */
+
+/* EDIT BUTTON */
+ .edit-btn{
+     background: #4f46e5;
+     color: white;
+}
+ .edit-btn:hover{
+     background: #4338ca;
+}
+/* DELETE BUTTON */
+ .delete-btn{
+     background: #ef4444;
+     color: white;
+}
+ .delete-btn:hover{
+     background: #dc2626;
+}
+/* CANCEL BUTTON */
+ .cancel-btn{
+     background: #d1d5db;
+     color: #111827;
+}
+ .cancel-btn:hover{
+     background: #9ca3af;
+}
+/* ANIMATION */
+ @keyframes popup{
+     from{
+         transform: scale(0.7);
+         opacity: 0;
+    }
+     to{
+         transform: scale(1);
+         opacity: 1;
+    }
+}
+ @keyframes fadeIn{
+     from{
+         opacity: 0;
+    }
+     to{
+         opacity: 1;
+    }
+}
